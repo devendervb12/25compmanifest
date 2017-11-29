@@ -1,0 +1,49 @@
+{
+  "sap.app" : {
+     "dataSources" : {
+        "myodata" : {
+        	"uri": "proxy/http/122.180.87.238:8000/sap/opu/odata/SAP/ZGW_BATCH25_PRODUCT_SRV" 
+        }
+     }
+  },
+  "sap.ui5" : {
+        "rootView" : "smax.ui.empReg.view.App",
+        "models" : {
+           "" : {
+		           "dataSource" : "myodata"
+		        }
+        },
+		"routing" : {
+			 "config" : {
+				 "routerClass" : "sap.m.routing.Router",
+				"viewType" : "XML",
+				"controlId" : "idApp",
+				"controlAggregation" : "pages"
+			 },
+			"routes" : [
+				 {
+					 "pattern" : "",
+					 "name" : "firstView",
+					 "target" : ["firstPage"]
+				 },
+				 {
+					 "pattern" : "prodDtl/{pid}",
+					 "name" : "nameProdDtl",
+					 "target" : ["secondPage"]
+				 }
+			 ],
+			 "targets" : {
+			     "firstPage" : {
+			           "viewName" : "smax.ui.empReg.view.InitialPage"
+			     },
+			     "secondPage" : {
+			    		 "viewName" : "smax.ui.empReg.view.ProductDetails"
+			     }
+			 
+			 }
+		 }
+  
+  
+  }
+
+}

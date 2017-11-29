@@ -1,0 +1,13 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="smax.ui.empReg.view.ProductDetails" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Product Details">
+		<content>
+		<ObjectHeader title="{ProductID}"
+		intro="{Name}" number="{Category}"/>
+		 
+	        <!--  <Text text="{/ProductID}"/>
+	         <Text text="{/Name}"/>
+	         <Text text="{/Category}"/>
+ -->		</content>
+	</Page>
+</core:View>
